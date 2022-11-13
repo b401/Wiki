@@ -69,10 +69,10 @@ Every user gets redirect to OAuth server and redirected back with a token.
    ```
    {
     "token_type": "Bearer",
-    "access_token":"RsT50jbQz0zqLgV3Ia",
+    "access_token":"vxjclJ@lcjj123V3Ia",
     "expires_in":3600,
     "scope":"photos",
-    "refresh_token":"H4HSMMV2409INW"
+    "refresh_token":"vj90dfsnhievvd"
    }
    ```
 
@@ -239,20 +239,22 @@ base64 encoded
 # Links'n Stuff
 ## Okta
 Issuer URI
-https://dev-61591274.okta.com/oauth2/default
+https://dev-20353911.okta.com/oauth2/default
 
 ### Generating PKCE
 https://example-app.com/pkce
 
+__All keys are changed__
+
 Example Authorization request
 ```
-https://dev-61591274.okta.com/oauth2/default/v1/authorize?
+https://dev-20353911.okta.com/oauth2/default/v1/authorize?
       response_type=code&
       scope=photos&
-      client_id=0oa1ii2ibjiXIQl5Q5d7&
+      client_id=adsasasd
       state=asdasdjkl1d2&
       redirect_uri=https://example-app.com/redirect&
-      code_challenge=fasdjil1dDifSifpSiHLFZQLM9dvY5J0DVfImBpnV9E&
+      code_challenge=dajil123jivlx0123jvxoqsdj1ifi5J0DVfImBpnV9E&
       code_challenge_method=S256
  ```
 
@@ -261,10 +263,10 @@ Login request to resource
 curl -X POST https://dev-61491274.okta.com/oauth2/default/v1/token \
 -d grant_type=authorization_code \
 -d redirect_uri=https://example-app.com/redirect \
--d client_id=0oa1ii2ibjiXIQl5Q5d7 \
--d client_secret=vasdigosdviSognwkDlO1mMkDpx14KP1ofcga3Yw \
--d code_verifier=e7485bfe950f2dd12cc591294fcb045b4b22332cc53609364b90f701 \
--d code=FcSiv01cal_kBsIHkKkVE2gyB-kUaYUA8NPF2z-2KiYk 
+-d client_id=01v9fjkladjgi29g02d7 \
+-d client_secret=vjailvjnh9bv9dk1cv0asdlxcjlvij1lofcga3Yw \
+-d code_verifier=cv01jlvxc90bnlwermlcsdj9ojsldcj910pjdlscjiwldmlwefjlf701 \
+-d code=vjosdf9bjl_jv90jdflvbj9rg-vj9x0fsdfsdf-vjilt 
  ```
 
  

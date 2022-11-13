@@ -6,24 +6,23 @@ date: M11-02-2022
 
 # ActiveDirectory enumeration
 
-## LDAP 
 
-Always use ldaps if possible
+There are a lot of information that you can get out of LDAP.
 
-### Find some information in ldap
+- IMPORTANT: Always use ldaps if possible 
+  Use `LDAPTPLS_REQCERT=never`
 
-This works without having a user that is authenticated
+## Unauthenticated requests
+
 ```
 ldapsearch -LLL -x -H ldaps://domainname -b '' -s base '(objectclass=*)'
 ```
+[](/w/images/ad/ad_functional_level.png)
 
-#### Interesting is the domainFunctionality level and OSVersion
-![](/w/images/ad/ad_functional_level.png)
-
-#### Authenticated requests
+## Authenticated requests
 The following requests will need an account.
 
-##### Get a list of all domain users
+### Get a list of all domain users
 ```
 ldapsearch-LLL -x -H ldaps://moon.lab -D "user@moon.lab" -w Welcome2015 -b dc=moon,dc=lab "(objectClass=user)" sAMAccountName userPrincipalName memberOf
 ```
