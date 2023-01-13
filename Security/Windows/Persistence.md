@@ -135,4 +135,4 @@ A new `REG_MULTI_SZ` entry with name `x` and a value pointing to an executable.
 
 Executing `query x` will now execute the binary. 
 
-*Terminal Services* does not to be running.
+*Terminal Services* does not need to be running.
