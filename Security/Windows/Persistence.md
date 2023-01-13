@@ -124,3 +124,15 @@ or is a part of the `Known DLLs` registry key located at:
 4. Current Working Directory
 5. Directories defined in the PATH variable
 
+
+## Misc registry
+
+### Terminal Server
+
+- `HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\Utilities\query`
+
+A new `REG_MULTI_SZ` entry with name `x` and a value pointing to a executable.
+
+Executing `query x` will now execute the executable. 
+
+*Terminal Services* does not to be running.
