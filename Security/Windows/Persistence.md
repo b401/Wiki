@@ -131,8 +131,8 @@ or is a part of the `Known DLLs` registry key located at:
 
 - `HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\Utilities\query`
 
-A new `REG_MULTI_SZ` entry with name `x` and a value pointing to a executable.
+A new `REG_MULTI_SZ` entry with name `x` and a value pointing to an executable.
 
-Executing `query x` will now execute the executable. 
+Executing `query x` will now execute the binary. 
 
 *Terminal Services* does not to be running.
