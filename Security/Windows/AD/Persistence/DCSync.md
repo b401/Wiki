@@ -3,7 +3,7 @@ title: DCSync
 date: M02-18-2023
 author: i4
 ---
-- `IDL_DRSGetNCChanges`
+- Permission: `IDL_DRSGetNCChanges`
 
 ## Info
 - Uses: `Directory Replication Service Remote Protocol (MS-DRSR)`
