@@ -6,33 +6,44 @@ date: M11-02-2022
 # Spawn /bin/sh from restricted environments
 
 Ways to escape a restricted environment
-```
+
+### Python 3
+```python
 python3
 python -c 'import pty; pty.spawn("/bin/sh")'
-
+```
+### Python 2
+```python
 python2
 echo os.system('/bin/bash')
-
-sh:
+```
+### sh
+```sh
 /bin/sh -i
-
-perl: 
+```
+### Perl
+```perl
 exec "/bin/sh";
 perl —e 'exec "/bin/sh";'
-
-ruby: 
+```
+### Ruby
+```Ruby
 exec "/bin/sh"
-
-lua: 
+```
+### lua
+```lua
 os.execute('/bin/sh')
-
-(From within IRB)
+```
+### From within IRB
+```bash
 exec "/bin/sh"
-
-(From within vi)
+```
+### From within vi
+```bash
 :!bash
 :set shell=/bin/bash:shell
-
-(From within nmap)
+``` 
+### Within nmap
+```bash
 !sh
 ```
