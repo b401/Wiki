@@ -10,7 +10,7 @@ author: i4
 - https://book.hacktricks.xyz/windows-hardening/stealing-windows-credentials/credentials-mimikatz
 
 ## Requirements
-- Needs to be run as Administrator (See high elevation [[UAC Bypass]] & [[Insecure File Permissions]])
+- Needs to be run as Administrator (See high elevation [UAC Bypass](/wiki/Security/Windows/Privilege%20Escalation/UAC%20Bypass.md) & [Insecure File Permissions](/wiki/Security/Windows/Privilege%20/Escalation/Insecure%20File%20Permissions.md))
 - Needs SeDebugPrivileges tokens
 
 ```cmd
@@ -108,8 +108,8 @@ SID               : S-1-5-21-723141792-3823283005-3320163372-1106
 ```
 
 ### Kerberos Tickets
-- See [[Kerberos]]
-- See [[Service Account Attacks]]
+- See [Kerberos](/wiki/Security/Windows/AD/Authentication/Kerberos.md)
+- See [Service Account Attacks](/wiki/Security/Windows/AD/Service%20Account%20Attacks.md)
 ```
 sekurlsa::tickets
 
