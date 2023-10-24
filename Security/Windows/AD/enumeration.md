@@ -4,6 +4,46 @@ author: i4
 date: M11-02-2022
 ---
 
+## DNS
+
+- Replace ADDC with the IP of a known domain controller
+- Replace DOMAIN.NAME with the domain you're targeting
+
+### Getting all domain controllers
+
+
+```
+dig -t SRV _ldap._tcp.dc._msdcs.DOMAIN.NAME @ADDC
+```
+
+### Getting the PDC
+
+```
+dig -t SRV _ldap._tcp.pdc._msdcs.DOMAIN.NAME @ADDC`
+```
+
+### Getting all ADDC that are running a KDC (Kerberos Distribution Center) service
+```
+dig -t SRV _kerberos._tcp.DOMAIN.NAME @ADDC
+```
+
+### Getting the domain with DNS (TCP/UDP)
+Search for a system with port 88 and/or 389, 636 open
+```
+dig -t ptr 0.in-addr.arpa @ADDC
+```
+
+### Finding ADCS systems
+
+**Certificate Enrollment Policy Web Service (CEP)**
+```
+dig -t SRV _cep._tcp.DC.DOMAIN.NAME @ADDC
+```
+**Certificate Enrollment Web Service (CES)
+```
+dig -t SRV _ces._tcp.DC.DOMAIN.NAME @ADDC
+```
+
 ## HTTP
 
 ### Show urls
@@ -189,13 +229,6 @@ Get-NetSession -ComputerName [server]
 
 ```
 $Searcher.filter="serviceprincipalname=*http*"
-```
-## DNS
-
-### Getting the domain with DNS (TCP/UDP)
-Search for a system with port 88 and/or 389, 636 open
-```
-dig ptr 0.in-addr.arpa @{DNS}
 ```
 
 ## LAPS
